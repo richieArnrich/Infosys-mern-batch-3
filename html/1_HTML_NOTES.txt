@@ -48,3 +48,52 @@ List in html
 * Unordered list: <ul>...</ul>
 * Ordered list: <ol>...</ol>
 * Definition list: <dl>...</dl>
+
+---------------------------------------
+Tables in HTML
+================
+<table>
+    <tr>
+        <th>Table Header</th>
+        <th>Table Header</th>
+        <th>Table Header</th>
+    </tr>
+    <tr>
+        <td>Amith</td>
+        <td>BE</td>
+        <td>2000</td>
+        <td>CSE</td>
+    </tr>
+<table>
+
+Attributes for table tag:
+---------------------------
+* border: 1
+* bordercolor: black
+* borderwidth: 1
+* cellpadding: 1
+* cellspacing: 1
+
+What is cellpadding: 
+-----------------
+cellpadding is the space between the cell content and the cell border. It is used to add space
+between the cell content and the cell border.
+
+What is cellspacing:
+-----------------
+cellspacing is the space between the cell border and the table border. It is used to add space
+between the each cell border.
+
+-----------------------------------------
+Create a dropdown
+==========================
+    <select name="" id="">
+      <option value="">Select Course</option>
+      <option value="">CSE</option>
+      <option value="">ME</option>
+      <option value="">Robotics</option>
+      <option value="">AI</option>
+      <option value="">Civil Engg</option>
+      <option value="">Commerce</option>
+    </select>
+---------------------------------------------------

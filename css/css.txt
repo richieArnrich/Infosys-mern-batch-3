@@ -1,0 +1,53 @@
+CSS stands for Cascading style sheets
+CSS is used to control the layout and appearance of web pages
+CSS is used to separate the presentation of a document from its structure, 
+which is controlled by HTML.
+
+Html provides structure of the webpage
+CSS provides styles for the webpage
+----------------------------------------------------------
+Types of styling
+-----------------
+1. Inline styling:
+    Styles are written inside the style attribute, the styles written this way
+    only affect one element at a time.
+
+2. Internal styling
+    Styles are written inside <style> tag.
+    Styles written this way affect multiple elements at a time
+    Makes use of css selectors
+
+3. External styling
+    Styles are written in a separate file with a .css extension.
+    Styles written this way affect multiple elements at a time
+    Makes use of css selectors
+----------------------------------------------------------
+CSS Selectors
+----------------
+    CSS selectors are used to select elements in the HTML document to apply styles
+    There are several types of CSS selectors
+    1. Universal selector (*): selects all the elements in the html page
+    2. Element selectors (element name): selects the elements from html based on the names given
+    3. Class selectors (.class): selects the elements from html based on the class name given
+
+CSS specificity:
+----------------
+CSS specificity is a measure of how specific a CSS selector is
+It determines which CSS rule will be applied to an element when there are multiple rules 
+that apply to the same element
+
+Order of specificity
+----------------
+1. Inline styles
+2. ID selectors (#id)
+3. Class selectors (.class)
+4. Element selectors (element name)
+5. Universal selector (*)
+----------------------------------------------------------
+Assignment
+------------
+1. Find out the advanced selectors in css (descendent selector and child selector etc..)
+2. create a table and assign basic styles like background color, text-alignment and color of text
+using css
+3. style a basic list using css
+4. style a basic dropdown using css
