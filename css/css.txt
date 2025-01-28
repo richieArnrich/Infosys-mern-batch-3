@@ -51,3 +51,38 @@ Assignment
 using css
 3. style a basic list using css
 4. style a basic dropdown using css
+-----------------------------------------------------------------------------------
+CSS Positions:
+-----------------
+CSS positions are used to position elements in the html document
+There are 5 main types of positions
+    1. Static position: elements are positioned according to the normal flow of the document (default)
+    2. Relative position: elements are positioned relative to their normal position, i.s they remain in 
+    the normal flow of the document and offset properties are applied.
+    3. Absolute position: elements are positioned relative to their nearest positioned ancestor, i.e they
+    are removed from the normal flow of the document and offset properties are applied.
+    4. Fixed position: elements are positioned relative to the viewport, i.e they are removed from the
+    normal flow of the document and offset properties are applied.
+    The remain fixed on the given point of the document
+    5. Sticky Position: It is the combination of relative and fixed. Upto a given point it remains as 
+    relative and post which it behaves as fixed.
+---------------------------------------------------------------------------------
+Display property:
+It tells how elements are displayed and behave on the webpage
+There are 7 types of display propertys
+1. block: elements are displayed as block level elements, i.e they start on a new line
+2. inline: elements are displayed as inline elements, i.e they are displayed on the same line
+3. inline-block: elements are displayed as inline-block elements, i.e they are displayed on the
+same line but they can have width and height
+4. flex: elements are displayed as flex elements, i.e they can be displayed in a flexible
+container
+5. grid: elements are displayed as grid elements, i.e they can be displayed in a grid row and column
+6. table: elements are displayed as table elements, i.e they can be displayed in a table
+7. none: elements are displayed as none, i.e they are not displayed on the webpage
+-------------------------------
+Questions to practice - 28/Jan/2025
+1. Center a div inside a div
+2. Create shapes within a div and display in row format
+   (rectange,square,triangle)
+3. Overlap 3 or 4 divs together and demonstrate z index property
+4. Create a table without using table tag with 3 rows and 3 columns and display it in a webpage
