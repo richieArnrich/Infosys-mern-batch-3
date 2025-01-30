@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Variables in JS</h1>
+    <script>
+      // JS in script tag : internal scripting (embedded scripting)
+      // Variables in JS
+      // 1. let keyword
+      let name = "John";
+      document.write(name + "<br>"); //on the html document
+      console.log(name); //print on the console of the browser; used for data testing
+      //   alert(name); //print on alert box
+      name = "Ricky"; //reassignment
+      document.write(name + "<br>");
+      //   redeclaring the variable
+      // let name = "John"; //error: redeclaration of the variable
+
+      //   const variable
+      const PI = 3.14;
+      document.write(PI + "<br>");
+      //   PI = 4.01; error: assignment to constant variable
+      //   document.write(PI + "<br>");
+      //   const PI = 5.0; cannot redeclare const variables
+
+      //   var keyword
+      var age = 25;
+      document.write(age + "<br>");
+      age = 30;
+      document.write(age + "<br>");
+      var age = 35; //no error: var keyword can be redeclared
+      document.write(age + "<br>");
+    </script>
+  </body>
+</html>

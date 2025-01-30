@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Press the button to see the content change</h2>
+    <h3 id="i1">I am heading</h3>
+    <button onclick="change()">Change Content</button>
+
+    <script>
+      function change() {
+        document.getElementById("i1").innerHTML = "New content added";
+      }
+    </script>
+  </body>
+</html>

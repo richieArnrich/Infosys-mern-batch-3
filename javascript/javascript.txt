@@ -1,0 +1,30 @@
+            JavaScript Notes
+=========================================================================
+What is javascript?
+JavaScript is a high-level, dynamic, and interpreted programming language that is primarily 
+used for client-side scripting (programming).
+It is used to add interactivity to web pages and is executed by web browsers.
+It is also used for server-side programming with technologies like Node.js.
+
+It is a versatile language that can be used for a wide range of applications, including web development,
+mobile app development, game development, and more.
+
+---------------------------------
+Variables in JavaScript
+---------------------------------
+In JavaScript, a variable is a name given to a value. It is used to store and manipulate
+data in a program.
+In JS we can declare variables using three keywords
+let, const, var.
+    Variables declared with let keyword:-
+    - can be reassigned
+    - cannot be redeclared
+    - has block scope
+    Variables declared with const keyword:-
+    - cannot be reassigned
+    - cannot be redeclared
+    - has block scope
+    Variables declared with var keyword:-
+    - can be reassigned
+    - can be redeclared
+    - has function scope
