@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let choice = window.prompt("Enter your choice"); //string
+      //   convert the string input into number
+      choice = parseInt(choice); //parseint is the function to convert string to number
+      switch (choice) {
+        case 1:
+          {
+            console.log("You chose 1");
+          }
+          break;
+        case 2:
+          {
+            console.log("You chose 2");
+          }
+          break;
+        case 3:
+          {
+            console.log("You chose 3");
+          }
+          break;
+        default: {
+          console.log("You chose something else");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -28,3 +28,88 @@ let, const, var.
     - can be reassigned
     - can be redeclared
     - has function scope
+
+------------------------------------------
+Control statments:
+------------------------------------------
+Control statements are used to control the flow of a program.
+They are used to decide which part of the code to execute and when to stop executing it.
+There are three types of control statements in JavaScript:
+1. Conditional statements
+2. Loops
+3. Jump statements
+
+Conditional statments
+---------------------------
+In JavaScript, a condition statement is used to execute a block of code if a certain condition is met
+There are three types of condition statements in JavaScript:
+1. if statement: It is used to execute a block of code if a condition is true.
+2. if-else statement: It is used to execute a block of code if a condition is false.
+3. switch statement: It is used to execute a block of code based on the value of a
+variable.
+
+4. If else if ladder
+It is used to check multiple conditions and execute a block of code if any of the conditions are true
+5. Nested if else
+It is used to check multiple conditions and execute a block of code if any of the conditions are true
+-------------------------------------
+Loops
+-------------------------------------
+Loops are used to execute a block of code repeatedly for a specified number of times.
+There are three types of loops in JavaScript:
+1. for loop: It is used to execute a block of code for a specified number of times
+2. while loop: It is used to execute a block of code while a certain condition is true
+3. do-while loop: It is used to execute a block of code while a certain condition
+is true
+
+while loop:
+It is used to execute a block of code while a certain condition is true
+It is used to execute a block of code repeatedly for a specified number of times
+Syntax: 
+    initialisation
+    while(condition){
+        // code to be executed
+        update
+    }
+    Working of while loop:
+    1. The initialisation statement is executed first
+    2. The condition is checked
+    3. If the condition is true, the code inside the while loop is executed
+    4. The update statement is executed
+    5. The condition is checked again
+    6. Steps 3-5 are repeated until the condition is false
+    -------------------------------------
+do-while loop
+It is used to execute a block of code while a certain condition is true
+It is used to execute a block of code repeatedly for a specified number of times
+Syntax:
+    initialisation;
+    do{
+        // code to be executed
+        update;
+    }while(condition);
+
+    Working of do-while loop:
+    1. The initialisation statement is executed first
+    2. The code inside the do-while loop is executed
+    3. The condition is checked
+    4. If the condition is true, the code inside the do-while loop is executed again
+    5. The update statement is executed
+    6. Steps 3-5 are repeated until the condition is false
+    -------------------------------------------------
+
+For loop
+It is used to execute a block of code for a specified number of times
+It is used to execute a block of code repeatedly for a specified number of times
+Syntax:
+for(initialisation; condition; update){
+    // code to be executed
+}
+Working of for loop
+1. The initialisation statement is executed first
+2. The condition is checked
+3. If the condition is true, the code inside the for loop is executed
+4. The update statement is executed
+5. The condition is checked again
+6. Steps 3-5 are repeated until the condition is false
+-------------------------------------

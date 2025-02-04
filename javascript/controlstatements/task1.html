@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let i = 1;
+      //   while (i <= 10) {
+      //     if (i % 2 == 0) {
+      //       document.write(i + "<br>");
+      //     }
+      //     i++;
+      //   }
+      //   document.write("<br>-----------------<br>");
+      //   let j = 1;
+      //   while (j <= 10) {
+      //     if (j % 2 != 0) {
+      //       document.write(j + "<br>");
+      //     }
+      //     j++;
+      //   }
+      //   document.write("<br>-----------------<br>");
+      let sum = 0;
+      let i = 1;
+      while (i <= 10) {
+        let prevsum = sum;
+        sum = sum + i;
+        document.write(prevsum + " + " + i + " = " + sum + "<br>");
+        i++;
+      }
+      document.write("<br>sum of 1 - 10 is : " + sum);
+      //   5 mins break, see you at 7:10
+    </script>
+  </body>
+</html>
