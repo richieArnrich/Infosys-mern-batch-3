@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Document Object Model</h1>
+    <p id="para1">I am a paragraph, being read by JS</p>
+    <p id="para2"></p>
+    <p id="para3"></p>
+    <script>
+      // Get the element with the id "para1"
+      let para = document.getElementById("para1");
+      //   change the style of para
+      para.style.color = "red";
+      para.style.fontSize = "40px";
+      para.style.fontFamily = "Arial";
+      para.style.textAlign = "center";
+      para.style.backgroundColor = "yellow";
+
+      //   change the content
+      para.textContent = "I am a paragraph, being read by JS, and I am red!";
+
+      let para2 = document.getElementById("para2");
+      para2.innerHTML = "Hello I am <b>Sachin</b> and I am a <i>Cricketer</i>";
+      let para3 = document.getElementById("para3");
+      para3.textContent =
+        "Hello I am <b>Sachin</b> and I am a <i>Cricketer</i>";
+    </script>
+  </body>
+</html>

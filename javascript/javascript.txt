@@ -113,3 +113,62 @@ Working of for loop
 5. The condition is checked again
 6. Steps 3-5 are repeated until the condition is false
 -------------------------------------
+Functions in javascript
+A function is a block of code that can be executed multiple times from different parts of the program
+It is a reusable block of code that can be called multiple times from different parts of the program
+
+Types of function based on parameters:
+1. Function with no parameters (non-parameterised):
+These do not take in inputs while being called
+function greet(){
+    //function body
+}
+2. Function with parameters (parameterised):
+These take in inputs while being called
+function greet(name){
+    //function body
+}
+
+Types of functions based on declaration
+1. anonymous function
+These are declared without a name
+function(){
+    //function body
+}
+2. named function
+These are declared with a name
+function greet(){
+    //function body
+}
+3. Arrow functions
+These are declared using the arrow operator ()=>
+const greet = () => {
+    //function body
+}
+-------------------------------------------------------------------------
+Browser Object Model
+The Browser Object Model (BOM) is a set of objects and methods that allow JavaScript to interact
+with the browser and its components
+The BOM is used to perform tasks such as
+* Getting and setting the value of form elements
+* Getting and setting the value of cookies
+* Getting and setting the value of local storage
+* Getting and setting the value of session storage
+---------------------------------------------------------
+Window object in BOM
+The window object is the topmost object in the BOM
+It represents the browser window
+It has properties and methods that allow JavaScript to interact with the browser and its components
+
+Document Object Model
+The Document Object Model (DOM) is a set of objects and methods that allow JavaScript to interact with
+the HTML document
+The DOM is used to perform tasks such as
+* Getting and setting the value of HTML elements
+* Getting and setting the value of CSS styles
+* Getting and setting the value of JavaScript variables
+* Getting and setting the value of cookies etc
+
+How does DOM read the HTML doc?
+The DOM reads the HTML document by parsing it and creating a tree-like structure of objects that 
+represent the HTML elements and attributes of the document and their relationships

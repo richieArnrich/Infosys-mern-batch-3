@@ -1,0 +1,24 @@
+<!-- create a interactive webpage which takes user input for the content, size of the 
+ font, color of the font and display the output accordingly -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Interactive Webpage</h1>
+    <script>
+      let content = prompt("Enter your content");
+      let fontSize = prompt("Enter the size of the font");
+      let fontColor = prompt("Enter the color of the font");
+
+      let para = document.createElement("p");
+      para.innerHTML = content;
+      para.style.fontSize = fontSize + "px";
+      para.style.color = fontColor;
+      document.body.appendChild(para);
+    </script>
+  </body>
+</html>

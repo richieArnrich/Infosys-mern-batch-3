@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Browser Object Model</h1>
+    <script>
+      //   console.log(window);
+      //    getting the screen dimensions
+      //   console.log(screen);
+      //     getting the location of the html document
+      //   console.log(location);
+      function checkInput(input) {
+        if (input >= 5) {
+          // go to github
+          window.location.href = "https://github.com";
+        } else {
+          window.location.href = "https://chatgpt.com/auth/ext_callback?next=";
+        }
+      }
+      let input = parseInt(window.prompt("Enter a number"));
+      checkInput(input);
+    </script>
+  </body>
+</html>

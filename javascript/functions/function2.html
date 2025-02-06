@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Function based on declaration</h1>
+    <script>
+      // Function declaration / named functions
+      function greet(name) {
+        document.write(`Hello, ${name}!<br>`);
+      }
+      greet("Don");
+      // ---------------------------------------------------------------------------
+      //   Anonymous function with no parameters
+      let anonfunc = function () {
+        document.write("Hello, World!<br>");
+      };
+      anonfunc();
+
+      //   Anonymous function with parameters
+      let anonfunc2 = function (name) {
+        document.write(`Hello, ${name}!<br>`);
+      };
+      anonfunc2("Karthik");
+      // ---------------------------------------------------------------------------
+      //   Arrow function with non parameters
+      let arrowfunc = () => {
+        document.write("Hello, World!<br>");
+      };
+      arrowfunc();
+
+      //   Arrow function with parameters
+      let arrowfunc2 = (name) => {
+        document.write(`Hello, ${name}!<br>`);
+      };
+      arrowfunc2("Murthy");
+      // ---------------------------------------------------------------------------
+    </script>
+  </body>
+</html>
