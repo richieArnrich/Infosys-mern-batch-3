@@ -172,3 +172,20 @@ The DOM is used to perform tasks such as
 How does DOM read the HTML doc?
 The DOM reads the HTML document by parsing it and creating a tree-like structure of objects that 
 represent the HTML elements and attributes of the document and their relationships
+---------------------------------------------------------------------------------------------
+Event Handling in javascript
+Event handling is the process of responding to user interactions with a web page, such as clicking a button
+or submitting a form
+There are several types of events in JavaScript, including
+* Mouse events (e.g. click, mouseover, mouseout)
+* Keyboard events (e.g. keydown, keyup, keypress)
+* Form events (e.g. submit, reset)
+
+Handling mouse events:
+onClick function
+
+Keyboard events:
+onKeydown function
+
+form events:
+onSubmit function

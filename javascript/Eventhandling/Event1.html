@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #p1 {
+        background-color: lightgreen;
+        padding: 10px;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 25px;
+      }
+      button {
+        background-color: blue;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 3rem;
+      }
+      button:hover {
+        background-color: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Click the button below to change the output</h1>
+    <p id="p1">
+      Steam rising from the kettle, sunlight seeping in through the crack of my
+      floral shades, my mint green tea timer resting on the kitchen counter, an
+      empty bottle sitting next to it, the criss-cross pattern on my gray wool
+      socks. Five things I can see. Standing in the kitchen, bleary-eyed and
+      groggy, I brush a pile of curls off my forehead, rest my elbow against the
+      cold Formica counter, rub the soft flannel of my pajama shirt, and finally
+      tap my foot against the terrazo.
+    </p>
+    <button onclick="changeOutput()">Change Content</button>
+    <script>
+      function changeOutput() {
+        let pEle = document.getElementById("p1");
+        pEle.textContent = `Maude dragged her suitcase down from a high shelf in the bedroom 
+        closet and opened it on her bed. She was staying with her friend Lindsay, who had graciously 
+        offered the use of her guest room when she heard about the break-up.You can have the room for 
+        as long as it takes, Lindsay told her. She didn’t know if her friend meant until David came 
+        to his senses, or she came to hers. Days after the sudden dissolution of her seven-year 
+        relationship, Maude had returned to the apartment she shared with David to collect her things.`;
+        pEle.style.color = "white";
+        pEle.style.backgroundColor = "darkblue";
+      }
+    </script>
+  </body>
+</html>

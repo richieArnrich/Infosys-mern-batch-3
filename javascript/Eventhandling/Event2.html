@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        font-size: 20px;
+        line-height: 40px;
+        text-align: justify;
+        background-color: lightblue;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+      button {
+        background-color: blue;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 3rem;
+      }
+      button:hover {
+        background-color: red;
+        cursor: pointer;
+      }
+      #story-title {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Toggle Output</h1>
+    <div>
+      <h2 id="story-title">Astrologer's Day</h2>
+      <p id="story">
+        ‘An Astrologer’s Day’ is a story from the Indian author R. K. Narayan’s
+        1943 collection Malgudi Days. The Malgudi of the collection’s title is a
+        fictional city in India, where all of the stories in the collection take
+        place. The opening story in the book, ‘An Astrologer’s Day’ is about an
+        unnamed astrologer who is confronted by a stranger who questions his
+        abilities.
+      </p>
+    </div>
+    <button onclick="changeStory()">Change Story</button>
+
+    <script>
+      let toggle = true;
+      let title = document.getElementById("story-title");
+      let story = document.getElementById("story");
+      function changeStory() {
+        if (toggle) {
+          title.textContent = "Astrologer's Day";
+          story.textContent = `‘An Astrologer’s Day’ is a story from the Indian author R. K. Narayan’s
+        1943 collection Malgudi Days. The Malgudi of the collection’s title is a
+        fictional city in India, where all of the stories in the collection take
+        place. The opening story in the book, ‘An Astrologer’s Day’ is about an
+        unnamed astrologer who is confronted by a stranger who questions his
+        abilities.`;
+          toggle = false;
+        } else {
+          title.textContent = "Gift Of The Magi";
+          story.textContent = `The story begins the day before Christmas with a young woman named Della 
+        sitting at home counting her savings. The home she lives in with her husband, Jim, is a cheap, 
+        furnished rental apartment. When they first moved in Jim was earning more money, but the 
+        couple has fallen on hard times and now live in poverty. Della has been putting money aside 
+        after buying groceries for many months. She is sad and anxious because despite her efforts, 
+        she has not saved enough money. She had been hoping to buy Jim something special for Christmas 
+        with her savings. Della begins to cry on her couch as she realizes she does not have enough 
+        money to buy Jim a Christmas present.`;
+          toggle = true;
+        }
+      }
+    </script>
+  </body>
+</html>
