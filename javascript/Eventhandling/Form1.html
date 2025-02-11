@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .form-group {
+        padding: 10px;
+      }
+      input,
+      textarea {
+        display: block;
+      }
+      .btn {
+        background-color: #4caf50;
+        padding: 10px;
+        border: none;
+        color: white;
+      }
+      input:focus {
+        box-shadow: 10px 5px 5px lightblue;
+      }
+      textarea:focus {
+        box-shadow: 10px 5px 5px lightblue;
+      }
+      .btn:hover {
+        background-color: #3e8e41;
+        cursor: pointer;
+        box-shadow: 10px 5px 5px rgb(229, 247, 229);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Registration Form</h1>
+    <form onsubmit="handleSubmit()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter you email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea name="address" id="address">You address</textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn" />
+      </div>
+    </form>
+    <script>
+      let nameInput = document.getElementById("name");
+      let emailInput = document.getElementById("email");
+      let addressInput = document.getElementById("address");
+
+      function handleSubmit() {
+        if (
+          nameInput.value === "" ||
+          emailInput.value === "" ||
+          addressInput.value === ""
+        ) {
+          alert("Please fill all the fields");
+        } else {
+          let userObj = {
+            name: nameInput.value,
+            email: emailInput.value,
+            address: addressInput.value,
+          };
+          alert("registration successfull");
+          console.log(userObj);
+        }
+        event.preventDefault();
+      }
+    </script>
+  </body>
+</html>
