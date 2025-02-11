@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nos = [2, 4, 6, 8, 10, 15, 20];
+      //   new arr = [4,8,12,16,20,30,40]
+      function multiply(num) {
+        return num * 2;
+      }
+      let newArr = nos.map(multiply);
+      console.log(nos);
+      console.log(newArr);
+      //   what map does?
+      //   map() calls a provided function once for each element in an array and returns a new
+      //   array with the results of applying the provided function to every element in this array.
+
+      let names = ["Richie", "Amith", "John", "Sarah", "Ronnie", "Ricky"];
+      //   find function to find amith
+      function findName(name) {
+        return name === "Amith";
+      }
+      let user = names.find(findName);
+      console.log(user);
+    </script>
+  </body>
+</html>

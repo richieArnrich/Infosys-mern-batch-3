@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Display User Names as List</h1>
+    <ul id="user-names"></ul>
+    <script>
+      const users = [
+        {
+          id: 1,
+          name: "Alice Johnson",
+          email: "alice@example.com",
+          age: 25,
+          isActive: true,
+        },
+        {
+          id: 2,
+          name: "Bob Smith",
+          email: "bob@example.com",
+          age: 30,
+          isActive: false,
+        },
+        {
+          id: 3,
+          name: "Charlie Brown",
+          email: "charlie@example.com",
+          age: 28,
+          isActive: true,
+        },
+      ];
+      const listEle = document.getElementById("user-names");
+      users.map((user) => {
+        const li = document.createElement("li");
+        li.textContent = user.name;
+        listEle.appendChild(li);
+      });
+
+      let name = "Bob Smith";
+      let user = users.find((user) => {
+        return user.name === name;
+      });
+      alert(user.name + " and " + user.email);
+    </script>
+  </body>
+</html>

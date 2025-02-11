@@ -69,7 +69,7 @@
       let nameInput = document.getElementById("name");
       let emailInput = document.getElementById("email");
       let addressInput = document.getElementById("address");
-
+      let users = [];
       function handleSubmit() {
         if (
           nameInput.value === "" ||
@@ -83,9 +83,11 @@
             email: emailInput.value,
             address: addressInput.value,
           };
+          users.push(userObj);
           alert("registration successfull");
           console.log(userObj);
         }
+        console.log(users);
         event.preventDefault();
       }
     </script>
