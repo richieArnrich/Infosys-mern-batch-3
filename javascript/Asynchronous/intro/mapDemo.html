@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Display array elements as h1</h1>
+    <div id="elements"></div>
+    <script>
+      let divEle = document.getElementById("elements");
+
+      let arr = [2, 4, 6, 8, 10, 12, 14, 16];
+      console.log(arr);
+      //   new array with arr*2
+      let arr2 = arr.map((num) => {
+        return num * 2;
+      });
+      console.log(arr2);
+
+      arr.map((num) => {
+        divEle.innerHTML += `<h1>${num}</h1>`;
+      });
+    </script>
+  </body>
+</html>

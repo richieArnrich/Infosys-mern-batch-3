@@ -189,3 +189,16 @@ onKeydown function
 
 form events:
 onSubmit function
+------------------------------------------------------------------------------------------------
+Assignment : Create a simple calculator
+Create a simple calculator that takes two numbers as input and performs basic arithmetic operations
+such as addition, subtraction, multiplication, and division
+==================================================================================================
+Asynchronous JavaScript
+Asynchronous JavaScript is a technique that allows JavaScript code to run in the background without blocking the execution of
+other code
+It is used to perform tasks such as
+* Making HTTP requests to a server
+* Reading and writing files
+* Performing complex calculations
+* Updating the user interface

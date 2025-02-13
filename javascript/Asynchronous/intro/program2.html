@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function orderPizza() {
+        let pizza = "🍕";
+        console.log(pizza + " Pizza ordered successfully");
+        setTimeout(() => {
+          for (let i = 0; i <= 30; i++) {
+            console.log(i);
+          }
+          console.log("pizza delivered");
+        }, 3000);
+      }
+
+      function callFriend() {
+        console.log("calling friend to have pizza");
+        console.log("friend takes 30mins to reach");
+        setTimeout(() => {
+          for (let i = 0; i < 30; i++) {
+            console.log(i);
+          }
+          console.log("friend reached, can have pizza now");
+        }, 3000);
+      }
+
+      orderPizza();
+      callFriend();
+    </script>
+  </body>
+</html>

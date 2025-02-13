@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data;
+      function assignData(callback) {
+        console.log("Assigning data...");
+        setTimeout(() => {
+          data = {
+            name: "John",
+            age: 30,
+            city: "New York",
+          };
+          callback();
+        }, 2000);
+      }
+
+      function displayData() {
+        console.log("Displaying data...");
+        console.log(data);
+      }
+      assignData(displayData);
+      //   function sent as a parameter to another function
+      //    is called as callback function
+      //   function which accepts the callback is called as
+      //   higher order function
+      //   syntax: HOF(callback)
+    </script>
+  </body>
+</html>

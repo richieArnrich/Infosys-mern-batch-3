@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Enter your choice to view data</h2>
+    <form>
+      <select name="choice" id="choice">
+        <option value="1">Display Names</option>
+        <option value="2">Display Full Data</option>
+      </select>
+      <input type="submit" onclick="handleSubmit()" />
+    </form>
+    <div id="names"></div>
+    <table id="table" style="display: none">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>email</th>
+          <th>age</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      let table = document.getElementById("table");
+      let users;
+      function assignData(callback) {
+        setTimeout(() => {
+          users = [
+            {
+              id: 1,
+              name: "Alice Johnson",
+              email: "alice@example.com",
+              age: 28,
+              isActive: true,
+            },
+            {
+              id: 2,
+              name: "Bob Smith",
+              email: "bob@example.com",
+              age: 34,
+              isActive: false,
+            },
+            {
+              id: 3,
+              name: "Charlie Brown",
+              email: "charlie@example.com",
+              age: 22,
+              isActive: true,
+            },
+            {
+              id: 4,
+              name: "Diana Prince",
+              email: "diana@example.com",
+              age: 30,
+              isActive: true,
+            },
+            {
+              id: 5,
+              name: "Ethan Hunt",
+              email: "ethan@example.com",
+              age: 40,
+              isActive: false,
+            },
+          ];
+          callback();
+        }, 3000);
+      }
+
+      function displayNames() {
+        let namesEle = document.getElementById("names");
+        users.map((user) => {
+          let name = user.name;
+          let nameEle = document.createElement("p");
+          nameEle.textContent = name;
+          namesEle.appendChild(nameEle);
+        });
+      }
+
+      function displayTable() {
+        table.style.display = "block";
+        let tbody = document.getElementById("tbody");
+        users.map((user) => {
+          let row = document.createElement("tr");
+          let idCell = document.createElement("td");
+          let nameCell = document.createElement("td");
+          let emailCell = document.createElement("td");
+          let ageCell = document.createElement("td");
+          idCell.textContent = user.id;
+          nameCell.textContent = user.name;
+          emailCell.textContent = user.email;
+          ageCell.textContent = user.age;
+          row.appendChild(idCell);
+          row.appendChild(nameCell);
+          row.appendChild(emailCell);
+          row.appendChild(ageCell);
+          tbody.appendChild(row);
+        });
+      }
+
+      function handleSubmit() {
+        let choice = document.getElementById("choice").value;
+        switch (choice) {
+          case "1":
+            {
+              assignData(displayNames);
+            }
+            break;
+          case "2":
+            {
+              assignData(displayTable);
+            }
+            break;
+        }
+        event.preventDefault();
+      }
+    </script>
+  </body>
+</html>
