@@ -202,3 +202,21 @@ It is used to perform tasks such as
 * Reading and writing files
 * Performing complex calculations
 * Updating the user interface
+------------------------------------------------------------------------------------------------
+Callbacks:
+Callbacks are functions that are passed as arguments to other functions
+They are used to handle the result of an asynchronous operation
+The function which accepts the callback function is called as Higher Order Function
+------------------------------------------------
+Callback Hell:
+Callback hell is a situation where a function calls another function, which in turn calls another function, and
+so on, creating a long chain of callbacks
+It is also known as Pyramid of Doom
+- It makes code hard to read and understand
+- It makes code hard to debug
+- It makes code hard to maintain
+------------------------------------------------
+Promises:
+Promises are a way to handle asynchronous operations in a more manageable way than callbacks
+A promise is an object that represents the eventual completion (or failure) of an asynchronous operation
+A promise can be in one of three states: pending, fulfilled, or rejected
