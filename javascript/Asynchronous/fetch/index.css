@@ -1,13 +1,19 @@
 .imgDiv {
   padding: 2rem;
+  border-right: 1px solid black;
+  height: 100%;
 }
 
 .imgDiv > img {
   width: 15rem;
+  padding-right: 5px;
 }
 
 .item {
   display: flex;
+  align-items: center;
+  border: 1px solid black;
+  margin: 5px;
 }
 .item > .details {
   padding: 2rem;

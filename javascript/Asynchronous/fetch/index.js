@@ -22,7 +22,7 @@ function displayItems(items) {
     /* details div start */
     let detailsDiv = document.createElement("div");
     // title start
-    let title = document.createElement("h2");
+    let title = document.createElement("h3");
     title.textContent = item.title;
     detailsDiv.appendChild(title);
     // title end
