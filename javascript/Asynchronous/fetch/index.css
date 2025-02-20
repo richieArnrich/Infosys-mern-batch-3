@@ -1,0 +1,21 @@
+.imgDiv {
+  padding: 2rem;
+}
+
+.imgDiv > img {
+  width: 15rem;
+}
+
+.item {
+  display: flex;
+}
+.item > .details {
+  padding: 2rem;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}

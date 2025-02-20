@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // async await
+      //   async function myFunction() {
+      //     return false;
+      //   }
+
+      //   let str = myFunction();
+      //   console.log(str);
+
+      // simulate a db connection
+      const admin = {
+        userid: "admin",
+        password: "admin",
+      };
+      function getAllUsers(userid, password) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (userid === admin.userid && password === admin.password) {
+              console.log("user authenticated");
+              resolve([
+                { id: 1, name: "John" },
+                { id: 2, name: "Jane" },
+                { id: 3, name: "Anil" },
+              ]);
+            } else {
+              reject("Invalid Credentials");
+            }
+          }, 2000);
+        });
+      }
+
+      async function requestUsers() {
+        try {
+          let users = await getAllUsers("admin", "admin");
+          console.log(users);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+
+      requestUsers();
+      console.log("I am herrrreeeeeee.....");
+    </script>
+  </body>
+</html>
