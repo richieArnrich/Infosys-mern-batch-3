@@ -1,0 +1,51 @@
+                        React JS
+===========================================================================
+What is React JS?
+------------------
+React JS is a JavaScript library for building user interfaces. 
+It allows developers to create reusable UI components and
+It allows developers to create segmentised code.
+It is used for building Single Page Applications (SPAs) and mobile applications.
+It is used for building reusable UI components and it is used for building reusable UI components.
+-------------------------------------------------------------------------
+Setting up react application
+--------------------------------
+To set up a React application, you need to follow these steps:
+1. Install Node.js and npm (the package manager for Node.js) on your computer.
+2. create app using npm create vite@latest project_name
+3. cd project_name
+4. npm install
+5. npm run dev
+
+-------------------------------------------------------------------------
+Components in React
+-------------------
+Components are the building blocks of React applications.
+They are reusable pieces of code that represent a UI element.
+They can contain other components.
+
+Types of components:
+1. Functional components
+2. Class components
+
+Functional Components:
+-------------------
+Functional components are the simplest type of component.
+They are defined as functions that return JSX elements.
+They do not have their own state and do not have lifecycle methods.
+--------------------
+Props in react:
+-----------------
+Props are short for properties.
+They are immutable properties and are passed from a parent component to a child component.
+They are used to pass data from a parent component to a child component.
+===============================================
+Class Component:
+----------------
+Class components are a type of component that has its own state and lifecycle methods.
+They are defined as classes that extend the React.Component class.
+They have their own state and lifecycle methods.
+
+State in react
+----------------
+State is an object that stores the data and UI state of a component.
