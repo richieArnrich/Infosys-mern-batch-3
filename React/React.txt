@@ -49,3 +49,61 @@ They have their own state and lifecycle methods.
 State in react
 ----------------
 State is an object that stores the data and UI state of a component.
+--------------------------------------------------------------------------------------------
+Event Handling in React JS
+--------------------------------------------------------
+What is an event?
+Event is the occurance of a user input
+Eg: Mouse click, Keyboard key press
+
+To handle events, we need event handlers.
+Mouse click events:
+1. onClick
+To handle mouse click events we use the onClick event handler
+2. onFocus
+To make an element active to take user inputs
+3. onBlur
+To make an element inactive to stop user inputs
+
+-------------------------------------------------------------
+Event Binding in react:
+--------------------------------
+Event binding is the process of attaching an event handler to an element.
+There are two ways to bind events in react:
+1. Inline event binding
+2. Arrow function event binding
+--------------------------------
+Data Binding in react:
+--------------------------------
+Data binding is the process of binding data to a component.
+There are two ways to bind data in react:
+1. Props
+2. State
+--------------------------------
+Types of data binding:
+1. One way data binding
+2. Two way data binding
+
+One way data binding:
+-------------------
+In one way data binding, the data flows from the parent component to the child component.
+The child component cannot change the data of the parent component.
+Data flows from componen(state) to view part (return statement/render function)
+--------------------------------
+Two way data binding:
+--------------------------------
+In two way data binding, the data flows from the parent component to the child component and from the
+child component to the parent component.
+The child component can change the data of the parent component.
+Data flows from component to view and view to component
+--------------------------------
+
+Hooks:-
+Hooks are a way to use state and other React features without writing a class.
+They are functions that let you "hook into" React state and lifecycle methods from function components.
+Meaning:-
+We can use React class component features in a functional component
+To use state in a functional component: useState()
+To use lifecycle methods in a functional component: useEffect() and useLayoutEffect()
+To populate a object to different component: useContext()
+(Example: dark theme, light theme)
