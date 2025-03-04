@@ -52,4 +52,11 @@ db.createCollection("customers");
 // db.customers.find();
 
 // fetch users only from USA
-db.customers.find({ country: "USA" });
+// db.customers.find({ country: "India" });
+
+// count the number of people who from India
+// db.customers.find({ country: { $regex: /india/i } }).count();
+
+// find the total number of customers in the database
+
+// db.customers.countDocuments();
