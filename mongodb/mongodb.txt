@@ -1,0 +1,9 @@
+---------------------MongoDB-----------------------------
+What is mongodb?
+MongoDB is a NoSQL database that stores data in a JSON-like format. It is a document
+oriented database, which means that it stores data in the form of documents, where each document 
+represents a single entity or object.
+
+Mongodb stores data in the form of collection and documents
+And each document is the description of the entity (object)'
+Collections is a group of documents and multiple collections make up a database
