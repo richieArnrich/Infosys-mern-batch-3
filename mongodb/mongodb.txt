@@ -7,3 +7,8 @@ represents a single entity or object.
 Mongodb stores data in the form of collection and documents
 And each document is the description of the entity (object)'
 Collections is a group of documents and multiple collections make up a database
+-------------------------------------------------------------------------
+Aggregation function in mongodb
+The aggregation framework in MongoDB is a powerful tool for data processing and analysis. 
+It allows you to perform complex data processing tasks on large datasets in a flexible and 
+efficient way.
