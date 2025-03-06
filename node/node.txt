@@ -1,0 +1,62 @@
+-------------------------------NODE JS---------------------------------
+What is nodejs
+Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run
+JavaScript on the server-side, making it a popular choice for building scalable and high-performance
+server-side applications.
+----------------------------------------------------------------------------
+### Node.js Features
+*   **Event-driven**: Node.js uses an event-driven, non-blocking I/O model, making
+it lightweight and efficient.
+*   **Scalable**: Node.js is designed to handle a large number of concurrent connections,
+making it suitable for real-time web applications.
+*   **High-performance**: Node.js uses the V8 JavaScript engine, which provides high-performance
+execution of JavaScript code.
+*   **Cross-platform**: Node.js can run on multiple platforms, including Windows, macOS, and
+Linux.
+### Node.js Use Cases
+*   **Real-time web applications**: Node.js is well-suited for building real-time web applications
+that require high-performance and scalability, such as live updates, chat apps, and
+streaming services.
+*   **Microservices architecture**: Node.js is a popular choice for building microservices
+architectures due to its lightweight and modular design.
+*   **API development**: Node.js is widely used for building RESTful APIs due to its simplicity
+and flexibility.
+### Node.js Advantages
+*   **Fast development**: Node.js allows developers to quickly build and deploy applications
+*   **Low overhead**: Node.js has a low overhead, making it suitable for building scalable
+applications
+*   **Large community**: Node.js has a large and active community, making it easy to find
+resources and support
+### Node.js Disadvantages
+*   **Steep learning curve**: Node.js requires a good understanding of JavaScript and
+asynchronous programming
+*   **Security concerns**: Node.js applications are vulnerable to security threats, such as
+SQL injection and cross-site scripting (XSS)
+### Node.js Best Practices
+*   **Use a framework**: Node.js has several popular frameworks, such as Express.js and K
+*   **Follow best practices for security**: Node.js applications are vulnerable to security
+threats, so it's essential to follow best practices for security, such as validating user input
+*   **Use a package manager**: Node.js has a package manager called npm, which makes it
+easy to manage dependencies
+### Node.js Tools and Resources
+*   **npm**: Node.js package manager
+*   **Express.js**: Popular Node.js framework for building web applications
+*   **Koa.js**: Another popular Node.js framework for building web applications
+-----------------------------------------------------------------------------------
+###Modules in nodejs
+In Node.js, a module is a file that exports a specific functionality or a set of functionalities.
+Modules are used to organize code, reuse code, and make it easier to manage dependencies.
+---------------
+EcmaScript
+EcmaScript is a specification for the JavaScript language. 
+It defines the syntax and semantics of the language
+Example:
+I am going to have dinner after my class
+Mere class khatam hone par, khana khanekeliye jaunga
+Nanna patashale mugida koodale, ahhara padeuvadakke hoguve
+-------------------------
+Types of exports
+1.  **Default exports**: A module can export a single value or function as the default export
+2.  **Named exports**: A module can export multiple values or functions as named exports
+3.  **Exporting multiple values**: A module can export multiple values or functions as a single
+export
