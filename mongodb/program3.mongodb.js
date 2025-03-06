@@ -30,4 +30,4 @@ db.createCollection("shippings");
 //   },
 // ]);
 
-// db.shippings.find({status: "pending"})
+db.shippings.find()

@@ -12,3 +12,22 @@ Aggregation function in mongodb
 The aggregation framework in MongoDB is a powerful tool for data processing and analysis. 
 It allows you to perform complex data processing tasks on large datasets in a flexible and 
 efficient way.
+----------------------------------------------
+Aggregation pipeline
+The aggregation pipeline is a series of stages that are applied to the input data to produce the output data
+The pipeline consists of several stages, including $match, $project, $group, $sort,
+$limit, $skip, $unwind, $lookup, $addFields, $set,
+$unset, $replaceWith, $redact, $mergeObjects, $arrayElemAt,
+The output of one stage becomes the input of the other stage
+-----------------------------------------------
+Stages of aggregation pipeline
+1. $match: This stage filters the documents to include only those that match a specified condition.
+2. $project: This stage selects the fields to include in the output documents.
+3. $group: This stage groups the documents by a specified field and applies an aggregation operation to
+each group.
+4. $sort: This stage sorts the documents in ascending or descending order based on a specified field
+5. $limit: This stage limits the number of documents in the output.
+6. $skip: This stage skips a specified number of documents in the output.
+7. $unwind: This stage transforms an array field into separate documents.
+8. $lookup: This stage performs a left outer join with a collection ie Try to lookinto the 
+foreign collection based on the specific field
