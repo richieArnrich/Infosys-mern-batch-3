@@ -60,3 +60,15 @@ Types of exports
 2.  **Named exports**: A module can export multiple values or functions as named exports
 3.  **Exporting multiple values**: A module can export multiple values or functions as a single
 export
+-----------------------------------------------------------------------------------------
+Nodejs FS module
+The FS (File System) module in Node.js provides an interface to interact with the file system.
+It allows you to perform various file system operations, such as reading and writing files, creating and deleting
+directories, and more.
+To read file:-
+fs.readFileSync()
+fs.readFile()
+-------
+To write file:-
+fs.writeFileSync()
+fs.writeFile()
