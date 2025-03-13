@@ -21,6 +21,12 @@
         </thead>
         <tbody id="tbody"></tbody>
     </table>
+    <form>
+        <div class="mt-3">
+            <input type="text" id="superhero" placeholder="Enter Superhero ID">
+            <input type="submit" onclick="handleSubmit()">
+        </div>
+    </form>
     <script>
         let tbody = document.getElementById("tbody");
 
@@ -41,7 +47,7 @@
                 let imageCell = document.createElement("td");
                 let image = document.createElement("img");
                 image.src = hero.src;
-                image.style.width = "8rem"
+                image.style.width = "3rem"
                 nameCell.innerHTML = hero.name;
                 powerCell.innerHTML = hero.superpower;
                 row.appendChild(nameCell);
@@ -49,6 +55,16 @@
                 row.appendChild(image);
                 tbody.appendChild(row);
             })
+        }
+
+        function handleSubmit() {
+            const id = document.getElementById("superhero").value;
+            fetch(`/users/${id}`).then((res) => res.json()).then((res) => {
+                console.log(res);
+            }).catch((err) => {
+                console.log(err);
+            })
+            event.preventDefault()
         }
     </script>
 </body>

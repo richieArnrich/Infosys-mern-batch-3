@@ -20,26 +20,31 @@ app.get("/message", (req, res) => {
 
 let users = [
   {
+    id: 1,
     name: "Spiderman",
     superpower: "Spider senses",
     src: "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BpZGVybWFufGVufDB8fDB8fHww",
   },
   {
+    id: 2,
     name: "Batman",
     superpower: "Gadgets",
     src: "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmF0bWFufGVufDB8fDB8fHww",
   },
   {
+    id: 3,
     name: "Superman",
     superpower: "Super strength",
     src: "https://images.unsplash.com/photo-1558679908-541bcf1249ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN1cGVybWFufGVufDB8fDB8fHww",
   },
   {
+    id: 4,
     name: "Ironman",
     superpower: "Gadgets",
     src: "https://images.unsplash.com/photo-1623984109622-f9c970ba32fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXJvbm1hbnxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
+    id: 5,
     name: "Black Widow",
     superpower: "Gadgets",
     src: "https://images.unsplash.com/photo-1574855784126-5555528e6dfd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2t3aWRvd3xlbnwwfHwwfHx8MA%3D%3D",
@@ -48,6 +53,17 @@ let users = [
 
 app.get("/users", (req, res) => {
   res.json(users);
+});
+
+//get only one single user
+app.get("/users/:id", (req, res) => {
+  console.log(req.params);
+  const id = req.params.id;
+  const user = users.find((user) => user.id === parseInt(id));
+  if (!user) {
+    res.json({ message: "superhero not found" });
+  }
+  res.json({ message: "Entered id is: " + id, user });
 });
 
 app.listen(8000, () => {
