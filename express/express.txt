@@ -1,0 +1,12 @@
+                    Express JS
+---------------------------------------------------------------------------
+What is Express JS
+=====================
+Express JS is a popular Node.js web framework that allows developers to build web applications 
+and APIs quickly and efficiently. It provides a flexible way to create web servers and handle
+requests and responses.
+
+What is an API?
+-----------------
+An API (Application Programming Interface) is a set of defined rules that enables different 
+software systems to communicate with each other
