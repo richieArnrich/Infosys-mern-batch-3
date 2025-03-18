@@ -39,7 +39,10 @@ app.get("/", (req, res) => {
 
 //route to render ejs file
 app.get("/view", (req, res) => {
-  res.render("index");
+  res.render("index", {
+    title: "Customer Details",
+    message: "Welcome Admin",
+  });
 });
 
 //write a route to get all customers
