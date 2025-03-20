@@ -1,7 +1,10 @@
-// npm i cors express nodemon mongoose 
+// npm i cors express nodemon mongoose
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+
+//import car routes
+const carRoutes = require("./routes/carRoutes.js");
 
 //db connection
 const connect = async () => {
@@ -17,6 +20,8 @@ const connect = async () => {
 app.get("/api", (req, res) => {
   res.json({ message: "Hello, World!" });
 });
+
+app.use("/cars", carRoutes);
 
 app.listen(4000, () => {
   connect();
