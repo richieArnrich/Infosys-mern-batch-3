@@ -13,7 +13,7 @@ const carSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  type: {
+  category: {
     type: String,
     enum: ["Sedan", "SUV", "MUV", "Hatchback"],
   },
@@ -29,7 +29,7 @@ const carSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  avaialable: {
+  available: {
     type: Boolean,
     default: "true",
   },
