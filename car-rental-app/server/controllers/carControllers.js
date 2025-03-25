@@ -11,4 +11,29 @@ const getAllCars = async (req, res) => {
   }
 };
 
-module.exports = { getAllCars };
+const addCar = async (req, res) => {
+  try {
+    const { name, brand, year, category, fuelType, rentPerDay, available } =
+      req.body;
+    const image = `/middlewares/uploads/${req.file.filename}`;
+    console.log(image);
+
+    const car = new Car({
+      name,
+      brand,
+      year,
+      category,
+      fuelType,
+      rentPerDay,
+      image,
+      available,
+    });
+    await car.save();
+    res.status(201).json({ car, message: "car added successfully" });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Error adding car" });
+  }
+};
+
+module.exports = { getAllCars, addCar };
