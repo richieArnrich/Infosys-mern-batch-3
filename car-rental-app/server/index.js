@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-
+const path = require("path");
 //import routes
 const carRoutes = require("./routes/carRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
@@ -21,6 +21,10 @@ app.get("/api", (req, res) => {
   res.json({ message: "Hello, World!" });
 });
 app.use(express.json());
+app.use(
+  "/uploads",
+  express.static(path.join(__dirname, "middlewares/uploads"))
+);
 app.use("/cars", carRoutes);
 app.use("/users", userRoutes);
 

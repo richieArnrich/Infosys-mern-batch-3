@@ -15,7 +15,7 @@ const addCar = async (req, res) => {
   try {
     const { name, brand, year, category, fuelType, rentPerDay, available } =
       req.body;
-    const image = `/middlewares/uploads/${req.file.filename}`;
+    const image = `/uploads/${req.file.filename}`;
     console.log(image);
 
     const car = new Car({
