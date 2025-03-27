@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { getToken } from "../utils/Tokens";
 
 function Header() {
+  const [isToken, setIsToken] = useState(false);
+  //gettoken
+  const token = getToken();
+  //getuser
+
+  function logOut() {
+    //clear the token
+    localStorage.removeItem("token");
+    token = false;
+  }
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -33,7 +44,18 @@ function Header() {
             </li>
           </ul>
           <div class="navbar-text">
-            <button class="btn btn-secondary">Login</button>
+            {token ? (
+              <div>
+                <span>{}</span>
+                <Link class="btn btn-secondary text-white" onClick={logOut}>
+                  Logout
+                </Link>
+              </div>
+            ) : (
+              <Link class="btn btn-secondary text-white" to="/login">
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Instance } from "../utils/Instance";
 function Home() {
   //access api in a functional component
   const [cars, setCars] = useState(null);
   const [isloading, setLoading] = useState(true);
   useEffect(() => {
-    axios
-      .get("http://localhost:4000/cars/")
+    Instance("/cars")
       .then((res) => {
         setCars(res.data);
         setLoading(false);
@@ -27,7 +27,7 @@ function Home() {
       <div className="row">
         {cars.map((car) => {
           return (
-            <div key={car.id} className="col-sm">
+            <div key={car.id} className="col-md-4">
               <div class="card" style={{ width: "18rem" }}>
                 <img
                   src={`http://localhost:4000${car.image}`}
@@ -36,7 +36,7 @@ function Home() {
                 />
                 <div class="card-body">
                   <h5 class="card-title">{car.name}</h5>
-                  <p class="card-text">
+                  <div class="card-text">
                     <div className="d-flex justify-content-around">
                       <p>
                         <svg
@@ -100,7 +100,12 @@ function Home() {
                         </span>
                       </p>
                     </div>
-                  </p>
+                    <div>
+                      <p>
+                        Availability: {car.available ? "Available" : "Booked"}
+                      </p>
+                    </div>
+                  </div>
                   <a href="#" class="btn btn-primary">
                     Book Now
                   </a>
