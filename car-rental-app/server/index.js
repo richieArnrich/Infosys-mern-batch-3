@@ -3,9 +3,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
+const cors = require("cors");
 //import routes
 const carRoutes = require("./routes/carRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
+const { METHODS } = require("http");
 //db connection
 const connect = async () => {
   try {
@@ -16,6 +18,14 @@ const connect = async () => {
     console.log(err);
   }
 };
+
+app.use(
+  cors({
+    origin: ["http://localhost:5173"],
+    credentials: true,
+    METHODS: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 app.get("/api", (req, res) => {
   res.json({ message: "Hello, World!" });
