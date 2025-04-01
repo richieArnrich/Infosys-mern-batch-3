@@ -15,6 +15,7 @@ function BookPage() {
 
   const [car, setCar] = useState(null);
   const [isloading, setLoading] = useState(true);
+  const date = new Date();
   useEffect(() => {
     Instance.get(`/cars/` + id)
       .then((res) => {
@@ -34,6 +35,7 @@ function BookPage() {
     const daysReqd = document.getElementById("reqDays").value;
     const bookPrice = car.rentPerDay * daysReqd;
     alert(bookPrice);
+    let bookingDate = document.getElementById("bookingDate").value;
     const bookObject = {
       userName: user.name,
       contact: user.phone,
@@ -42,6 +44,7 @@ function BookPage() {
       carId: id,
       Days: daysReqd,
       totalPrice: bookPrice,
+      bookingDate: bookingDate,
       car: car,
     };
     console.log(bookObject);
@@ -58,20 +61,29 @@ function BookPage() {
           />
         </div>
         <div className="p-3 m-3">
-          <h3>Car name: {car.name}</h3>
-          <p>Car brand: {car.brand}</p>
+          <h3>{car.name}</h3>
           <p>Car price: {car.rentPerDay}</p>
+          <p>{car.category}</p>
           <input
             type="text"
             placeholder="number of days required"
             id="reqDays"
+            className="form-control"
           />{" "}
           <br />
           <input
-            type="submit"
-            className="btn btn-primary m-2"
-            onClick={handleSubmit}
+            type="date"
+            min="2018-12-31"
+            max={`${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`}
+            className="form-control"
           />
+          <button
+            type="submit"
+            className="btn btn-primary p-2 mt-1"
+            onClick={handleSubmit}
+          >
+            Book Now
+          </button>
         </div>
       </div>
     </div>
