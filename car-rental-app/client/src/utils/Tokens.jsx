@@ -1,19 +1,19 @@
 //function to set token
 export function setToken(token) {
-  localStorage.setItem("token", token);
+  localStorage.setItem("token", JSON.stringify(token));
 }
 
 //function to getToken
 export function getToken() {
-  return localStorage.getItem("token");
+  return JSON.parse(localStorage.getItem("token"));
 }
 
 //function to setuser
 export function setUser(user) {
-  localStorage.setItem("user", user);
+  localStorage.setItem("user", JSON.stringify(user));
 }
 
 //function to getuser
 export function getUser() {
-  return localStorage.getItem("user");
+  return JSON.parse(localStorage.getItem("user"));
 }

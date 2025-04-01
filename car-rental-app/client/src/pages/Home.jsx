@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Instance } from "../utils/Instance";
+import { Link } from "react-router-dom";
 function Home() {
   //access api in a functional component
   const [cars, setCars] = useState(null);
@@ -27,7 +28,7 @@ function Home() {
       <div className="row">
         {cars.map((car) => {
           return (
-            <div key={car.id} className="col-md-4">
+            <div key={car._id} className="col-md-4">
               <div class="card" style={{ width: "18rem" }}>
                 <img
                   src={`http://localhost:4000${car.image}`}
@@ -106,9 +107,9 @@ function Home() {
                       </p>
                     </div>
                   </div>
-                  <a href="#" class="btn btn-primary">
+                  <Link to={`/book/${car._id}`} class="btn btn-primary">
                     Book Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

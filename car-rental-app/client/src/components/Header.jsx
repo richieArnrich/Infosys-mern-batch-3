@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { getToken } from "../utils/Tokens";
+import { getToken, getUser } from "../utils/Tokens";
 
 function Header() {
   const [isToken, setIsToken] = useState(false);
   //gettoken
   const token = getToken();
+  console.log(token);
+  const user = getUser();
+  console.log(user);
   //getuser
 
   function logOut() {
@@ -46,7 +49,7 @@ function Header() {
           <div class="navbar-text">
             {token ? (
               <div>
-                <span>{}</span>
+                <span>{user.name}</span>
                 <Link class="btn btn-secondary text-white" onClick={logOut}>
                   Logout
                 </Link>

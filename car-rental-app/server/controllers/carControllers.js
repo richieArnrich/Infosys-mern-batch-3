@@ -11,6 +11,22 @@ const getAllCars = async (req, res) => {
   }
 };
 
+//get single car
+const getCar = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const car = await Car.find({ _id: id });
+    console.log(car);
+    if (!car) {
+      return res.status(404).json({ message: "Car not found" });
+    }
+    res.status(200).json(...car); //using spread operator
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err });
+  }
+};
+
 const addCar = async (req, res) => {
   try {
     const { name, brand, year, category, fuelType, rentPerDay, available } =
@@ -36,4 +52,4 @@ const addCar = async (req, res) => {
   }
 };
 
-module.exports = { getAllCars, addCar };
+module.exports = { getAllCars, addCar, getCar };
