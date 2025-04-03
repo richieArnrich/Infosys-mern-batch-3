@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { getToken, getUser } from "../utils/Tokens";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Instance } from "../utils/Instance";
 
 function BookPage() {
   const token = getToken();
   const user = getUser();
+  let navigate = useNavigate();
   console.log(user);
   const { id } = useParams();
   console.log(id);
   if (!token) {
     alert("Please login");
-    return <Redirect to="/login" />;
+    navigate("/login");
   }
 
   const [car, setCar] = useState(null);
@@ -56,9 +57,9 @@ function BookPage() {
   }
   return (
     <div>
-      <h1>Booking page</h1>
+      <h1 className="bg-success p-2 text-white">Book your drive now!</h1>
       <div className="d-flex">
-        <div className="p-3 m-3">
+        <div className="p-3 m-3 border-right">
           <img
             src={`http://localhost:4000${car.image}`}
             style={{ height: "20rem" }}
@@ -67,7 +68,7 @@ function BookPage() {
         </div>
         <div className="p-3 m-3">
           <h3>{car.name}</h3>
-          <p>Car price: {car.rentPerDay}</p>
+          <p>Car price: &#x20b9;{car.rentPerDay}</p>
           <p>{car.category}</p>
           <input
             type="text"
