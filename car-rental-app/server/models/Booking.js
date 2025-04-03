@@ -3,43 +3,23 @@ const Car = require("./Car");
 const { Schema } = mongoose;
 
 const bookingSchema = new Schema({
-  user_id: {
-    type: String,
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
   },
-  booking_date: {
-    type: String,
+  car: {
+    type: Schema.Types.ObjectId,
+    ref: "Cars",
   },
-  userName: {
+  start_date: {
     type: String,
-  },
-  userEmail: {
-    type: String,
-  },
-  userContact: {
-    type: String,
-  },
-  userAddress: {
-    type: String,
-  },
-  bookingStatus: {
-    type: boolean,
-  },
-  carId: {
-    type: String,
+    required: true,
   },
   Days: {
     type: String,
   },
   totalPrice: {
-    type: String,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  brand: {
-    type: String,
-    required: true,
+    type: Number,
   },
 });
 // userName: user.name,

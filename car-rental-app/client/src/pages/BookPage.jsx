@@ -6,6 +6,7 @@ import { Instance } from "../utils/Instance";
 function BookPage() {
   const token = getToken();
   const user = getUser();
+  console.log(user);
   const { id } = useParams();
   console.log(id);
   if (!token) {
@@ -32,22 +33,26 @@ function BookPage() {
 
   function handleSubmit() {
     // handle form submission
-    const daysReqd = document.getElementById("reqDays").value;
-    const bookPrice = car.rentPerDay * daysReqd;
-    alert(bookPrice);
-    let bookingDate = document.getElementById("bookingDate").value;
-    const bookObject = {
-      userName: user.name,
-      contact: user.phone,
-      email: user.email,
-      address: user.address,
-      carId: id,
-      Days: daysReqd,
-      totalPrice: bookPrice,
-      bookingDate: bookingDate,
-      car: car,
+    const userId = user._id;
+    const carId = id;
+    const days = document.getElementById("reqDays").value;
+    const price = car.rentPerDay;
+    const totalPrice = days * price;
+    const start_date = document.getElementById("bookingDate").value;
+    const bookingObj = {
+      userId: userId,
+      carId: carId,
+      days,
+      totalPrice,
+      start_date,
     };
-    console.log(bookObject);
+    Instance.post("/bookings/bookcar", bookingObj)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
   return (
     <div>
@@ -76,6 +81,7 @@ function BookPage() {
             min="2018-12-31"
             max={`${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`}
             className="form-control"
+            id="bookingDate"
           />
           <button
             type="submit"

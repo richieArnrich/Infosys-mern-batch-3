@@ -7,6 +7,7 @@ const cors = require("cors");
 //import routes
 const carRoutes = require("./routes/carRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
+const bookRoutes = require("./routes/bookRoutes.js");
 const { METHODS } = require("http");
 //db connection
 const connect = async () => {
@@ -37,6 +38,7 @@ app.use(
 );
 app.use("/cars", carRoutes);
 app.use("/users", userRoutes);
+app.use("/bookings", bookRoutes);
 
 app.listen(4000, () => {
   connect();

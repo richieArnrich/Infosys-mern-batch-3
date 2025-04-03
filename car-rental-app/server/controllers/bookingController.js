@@ -1,41 +1,39 @@
-const booking = require("../models/Booking");
+const Booking = require("../models/Booking");
 
 //create a new booking
-const bookCar = async (req, res) => {
+const addBooking = async (req, res) => {
   try {
-    const {
-      userName,
-      contact,
-      email,
-      address,
-      carId,
-      Days,
+    const { userId, carId, start_date, days, totalPrice } = req.body;
+    const booking = new Booking({
+      user: userId,
+      car: carId,
+      start_date,
+      Days: days,
       totalPrice,
-      bookingDate,
-      car,
-    } = req.body;
-    const bookObj = {
-      userName: userName,
-      userContact: contact,
-      userAddress: address,
-      bookingStatus: true,
-      userEmail: email,
-      carId: carId,
-      Days: Days,
-      totalPrice: totalPrice,
-      booking_date: bookingDate,
-    };
-    const BookDoc = await Booking.create(bookObj);
-    res
-      .status(201)
-      .json({ message: "Booking created successfully", data: BookDoc });
+    });
+    await booking.save();
+    res.status(201).json({ message: "Booking created successfully" });
   } catch (err) {
-    res.status(500).json({ message: "Error creating booking", data: err });
+    console.log(err);
+    res.status(500).json({ message: "Error creating booking" });
+  }
+};
+
+//get all bookings
+const getAllBookings = async (req, res) => {
+  try {
+    const bookings = await Booking.find().populate("user").populate("car");
+    console.log(bookings);
+    res.status(200).json(bookings);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Error retrieving bookings", data: err });
   }
 };
 
 module.exports = {
-  bookCar,
+  addBooking,
+  getAllBookings,
 };
 
 // userName: user.name,
